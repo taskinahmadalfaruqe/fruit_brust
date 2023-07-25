@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <title>Fruit Burst</title>
+
+    <!-- TAILWIND CSS LINK    -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <!-- GOOGLE FONT LINK  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+
+    <!-- FONT AWESOME LINK  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- CSS STYLE PART START  -->
+    <style>
+        .lato{
+            font-family: 'Lato', sans-serif;
+        }
+        button:focus{
+            outline: 0;
+            border: none;
+        }
+        input:focus{
+            outline: 0;
+        }
+        button{
+            border: none;
+        }
+    </style>
+
+
+ 
+
+    <!-- TAILWIND CONFIG FILE START  -->
+    <script>
+        tailwind.config = {
+          theme: {
+
+            container: {
+                center: true,
+                padding: {
+                    DEFAULT: '10px',
+                    sm: '10px',
+                    lg: '2rem',
+                    xl: '2rem',
+                    '2xl': '3rem',
+                },
+                },
+
+            extend: {
+                backgroundImage: {
+                    'banner01': "url(./images/banner1.png)",
+                    'banner02': "url(./images/banner2.png)",
+                    'banner03': "url(./images/banner3.png)",
+                    'banner04': "url(./images/banner4.png)",
+                    'liner': "linear-gradient(180deg, #121212 0%, rgba(18, 18, 18, 0.00) 100%)",
+                },
+
+
+
+              colors: {
+                primary: '#F85559',
+                white: '#ffffff',
+                black: '#121212',
+                light: '#FBC0A8',
+              }
+            }
+          }
+        }
+    </script>
+
+
+
+</head>
+<body class="lato">
+    
+    <!--  HEADER PART START  -->
+    <header>
+
+
+    <!-- NAV BAR PART START  -->
+    <nav class="hidden">
+        <div class="container bg-primary rounded-[600px] text-white">
+            <div class="navbar flex justify-between items-center ">
+                <div class=" hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1">
+                    <li><a>Home</a></li>
+                      <li><a>About US</a></li>
+                      <li><a>Shop</a></li>
+                      <li><a>All Fruits</a></li>
+                  </ul>
+                </div>
+                <div class=" flex justify-between flex-row-reverse flex-1">
+                    <div class="dropdown">
+                      <label tabindex="0" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                      </label>
+                      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-black">
+                        <li><a>Home</a></li>
+                        <li><a>About US</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>All Fruits</a></li>
+                      </ul>
+                    </div>
+                    <div class="flex gap-3 items-center ">
+                        <div class="image">
+                            <img src="images/logo.png" alt="Logo">
+                        </div>
+                        <p>Fruit Brust</p>
+                    </div>
+                </div>
+                <div class="hidden lg:flex">
+                  <form class="bg-white rounded-[300px] p-2">
+                    <input type="text" class="text-primary" placeholder="Search Here">
+                    <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass text-primary "></i>
+                    </button>
+                  </form>
+                </div>
+              </div>
+        </div>
+    </nav>
+    <!-- NAV BAR PART END -->
+
+    <!-- BANNER PART START  -->
+    <section id="banner">
+        <div class="container">
+            <div class="carousel w-full rounded-xl">
+                <!-- banner01  -->
+                <div id="slide1" class="carousel-item relative w-full bg-banner01 text-white">
+                  <div class="overlay bg-liner w-[100%] h-[100%] p-3 lg:pt-[80px] lg:pb-[225px]">
+                    <div class="text-center space-y-7">
+                        <h1  class=" text-3xl lg:text-7xl  font-bold">Exotic tastes at your <br> doorstep</h1>
+                        <p class=" text-[15px] lg:text-xl px-8">We supply highly quality organic products</p>
+                        <button class="bg-primary py-3 px-5 rounded-lg uppercase font-semibold">Shop Now</button>
+                    </div>
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-0 right-0  lg:left-5 lg:right-5 top-1/2">
+                    <a href="#slide4" class="btn btn-circle text-primary bg-transparent md:bg-black border-none md:border-solid border-primary text-2xl">❮</a> 
+                    <a href="#slide2" class="btn btn-circle text-primary bg-transparent md:bg-black border-none md:border-solid border-primary text-2xl">❯</a>
+                  </div>
+                  </div>
+                </div> 
+
+                <!-- banner02  -->
+                <div id="slide2" class="carousel-item relative w-full bg-banner02 text-white">
+                    <div class="overlay bg-liner w-[100%] h-[100%] p-3 lg:pt-[80px] lg:pb-[225px]">
+                      <div class="text-center space-y-7">
+                          <h1  class=" text-3xl lg:text-7xl  font-bold">Exotic tastes at your <br> doorstep</h1>
+                          <p class=" text-[15px] lg:text-xl px-8">We supply highly quality organic products</p>
+                          <button class="bg-primary py-3 px-5 rounded-lg uppercase font-semibold">Shop Now</button>
+                      </div>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-0 right-0  lg:left-5 lg:right-5 top-1/2">
+                      <a href="#slide1" class="btn btn-circle text-primary bg-transparent md:bg-black border-none md:border-solid border-primary text-2xl">❮</a> 
+                      <a href="#slide3" class="btn btn-circle text-primary bg-transparent md:bg-black border-none md:border-solid border-primary text-2xl">❯</a>
+                    </div>
+                    </div>
+                  </div> 
+
+
+                <!-- banner03  -->
+                <div id="slide3" class="carousel-item relative w-full bg-banner03 text-white">
+                    <div class="overlay bg-liner w-[100%] h-[100%] p-3 lg:pt-[80px] lg:pb-[225px]">
+                      <div class="text-center space-y-7">
+                          <h1  class=" text-3xl lg:text-7xl  font-bold">Exotic tastes at your <br> doorstep</h1>
+                          <p class=" text-[15px] lg:text-xl px-8">We supply highly quality organic products</p>
+                          <button class="bg-primary py-3 px-5 rounded-lg uppercase font-semibold">Shop Now</button>
+                      </div>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-0 right-0  lg:left-5 lg:right-5 top-1/2">
+                      <a href="#slide2" class="btn btn-circle text-primary bg-transparent md:bg-black border-none md:border-solid border-primary text-2xl">❮</a> 
+                      <a href="#slide4" class="btn btn-circle text-primary bg-transparent md:bg-black border-none md:border-solid border-primary text-2xl">❯</a>
+                    </div>
+                    </div>
+                  </div>  
+
+                <!-- banner04  -->
+                <div id="slide4" class="carousel-item relative w-full bg-banner04 text-white">
+                    <div class="overlay bg-liner w-[100%] h-[100%] p-3 lg:pt-[80px] lg:pb-[225px]">
+                      <div class="text-center space-y-7">
+                          <h1  class=" text-3xl lg:text-7xl  font-bold">Exotic tastes at your <br> doorstep</h1>
+                          <p class=" text-[15px] lg:text-xl px-8">We supply highly quality organic products</p>
+                          <button class="bg-primary py-3 px-5 rounded-lg uppercase font-semibold">Shop Now</button>
+                      </div>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-0 right-0  lg:left-5 lg:right-5 top-1/2">
+                      <a href="#slide3" class="btn btn-circle text-primary bg-transparent md:bg-black border-none md:border-solid border-primary text-2xl">❮</a> 
+                      <a href="#slide1" class="btn btn-circle text-primary bg-transparent md:bg-black border-none md:border-solid border-primary text-2xl">❯</a>
+                    </div>
+                    </div>
+                  </div> 
+        </div>
+    </section>
+    <!-- BANNER PART END -->
+
+
+
+    </header>
+    <!--  HEADER PART END -->
+
+
+    <!-- NAV BAR PART START  -->
+    <!-- NAV BAR PART END -->
+
+    <!-- NAV BAR PART START  -->
+    <!-- NAV BAR PART END -->
+
+
+
+    <!-- NAV BAR PART START  -->
+    <!-- NAV BAR PART END -->
+</body>
+</html>
